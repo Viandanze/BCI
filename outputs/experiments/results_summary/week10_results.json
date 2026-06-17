@@ -1,0 +1,45 @@
+{
+  "run_time": "2026-06-17T11:27:54.152590",
+  "total_duration_sec": 174.4,
+  "total_experiments": 3,
+  "successful": 0,
+  "failed": 3,
+  "experiments": {
+    "p0-4_tuning_augmentation": {
+      "id": "p0-4_tuning_augmentation",
+      "name": "EEGNet调优 - 数据增强组合 (Strategy A)",
+      "priority": "P0",
+      "status": "error",
+      "start_time": "2026-06-17T11:24:59.761394",
+      "end_time": "2026-06-17T11:25:38.146634",
+      "duration_sec": 38.4,
+      "output": "",
+      "error": "object of type 'NoneType' has no len()",
+      "return_code": 0
+    },
+    "p0-5_tuning_hyperparam": {
+      "id": "p0-5_tuning_hyperparam",
+      "name": "EEGNet调优 - 超参搜索 (Strategy B)",
+      "priority": "P0",
+      "status": "error",
+      "start_time": "2026-06-17T11:25:38.146634",
+      "end_time": "2026-06-17T11:27:50.474788",
+      "duration_sec": 132.3,
+      "output": "",
+      "error": "object of type 'NoneType' has no len()",
+      "return_code": 0
+    },
+    "p0-6_tuning_architecture": {
+      "id": "p0-6_tuning_architecture",
+      "name": "EEGNet调优 - 架构改进 (BatchNorm+LabelSmoothing)",
+      "priority": "P0",
+      "status": "error",
+      "start_time": "2026-06-17T11:27:50.475790",
+      "end_time": "2026-06-17T11:27:54.152590",
+      "duration_sec": 3.7,
+      "output": "",
+      "error": "object of type 'NoneType' has no len()",
+      "return_code": 2
+    }
+  }
+}

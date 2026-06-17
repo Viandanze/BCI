@@ -1,0 +1,51 @@
+{
+  "experiment": "Strategy A: Data Augmentation",
+  "timestamp": "2026-06-17T11:36:48.473858",
+  "subjects": [
+    1
+  ],
+  "augmentation_results": {
+    "baseline": {
+      "accuracy": 0.4583333333333333,
+      "kappa": 0.22680412371134007,
+      "f1_macro": 0.40606060606060607
+    },
+    "gaussian_noise": {
+      "accuracy": 0.36666666666666664,
+      "kappa": 0.07407407407407418,
+      "f1_macro": 0.25396825396825395
+    },
+    "temporal_mask": {
+      "accuracy": 0.4458333333333333,
+      "kappa": 0.0,
+      "f1_macro": 0.26666666666666666
+    },
+    "channel_mask": {
+      "accuracy": 0.4325,
+      "kappa": 0.1964285714285714,
+      "f1_macro": 0.45555555555555555
+    },
+    "time_shift": {
+      "accuracy": 0.495,
+      "kappa": 0.1964285714285714,
+      "f1_macro": 0.45555555555555555
+    },
+    "band_perturbation": {
+      "accuracy": 0.4333333333333333,
+      "kappa": 0.0,
+      "f1_macro": 0.26666666666666666
+    },
+    "mixup": {
+      "accuracy": 0.4958333333333333,
+      "kappa": 0.1573033707865169,
+      "f1_macro": 0.39420289855072466
+    },
+    "all_combined": {
+      "accuracy": 0.4066666666666666,
+      "kappa": 0.125,
+      "f1_macro": 0.43274853801169594
+    }
+  },
+  "best_combination": "mixup",
+  "best_accuracy": 0.4958333333333333
+}

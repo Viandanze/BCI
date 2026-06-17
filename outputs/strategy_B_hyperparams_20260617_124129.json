@@ -1,0 +1,458 @@
+{
+  "experiment": "Strategy B: Hyperparameter Search",
+  "timestamp": "2026-06-17T12:39:20.196765",
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "search_type": "random",
+  "trials": [
+    {
+      "F1": 4,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.54320987654321,
+      "kappa": 0.24271844660194175
+    },
+    {
+      "F1": 8,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.5061728395061729,
+      "kappa": 0.09302325581395343
+    },
+    {
+      "F1": 16,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.4947768281101614,
+      "kappa": 0.19794344473007708
+    },
+    {
+      "F1": 8,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.49382716049382713,
+      "kappa": 0.10123456790123453
+    },
+    {
+      "F1": 4,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.48243114909781576,
+      "kappa": 0.12605042016806722
+    },
+    {
+      "F1": 16,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.48148148148148145,
+      "kappa": 0.18324607329842935
+    },
+    {
+      "F1": 4,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.48100664767331436,
+      "kappa": 0.0
+    },
+    {
+      "F1": 8,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.48100664767331436,
+      "kappa": 0.0
+    },
+    {
+      "F1": 8,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.47056030389363723,
+      "kappa": 0.3553719008264463
+    },
+    {
+      "F1": 16,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.46961063627730293,
+      "kappa": 0.22580645161290325
+    },
+    {
+      "F1": 8,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.46913580246913583,
+      "kappa": 0.37349397590361444
+    },
+    {
+      "F1": 8,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.46913580246913583,
+      "kappa": 0.06887052341597799
+    },
+    {
+      "F1": 4,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.4686609686609686,
+      "kappa": 0.0174418604651162
+    },
+    {
+      "F1": 8,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.4686609686609686,
+      "kappa": 0.053221288515406084
+    },
+    {
+      "F1": 8,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.4686609686609686,
+      "kappa": -0.015625
+    },
+    {
+      "F1": 16,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.4686609686609686,
+      "kappa": 0.14213197969543145
+    },
+    {
+      "F1": 16,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.4577397910731244,
+      "kappa": 0.268542199488491
+    },
+    {
+      "F1": 8,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.45726495726495725,
+      "kappa": 0.0
+    },
+    {
+      "F1": 4,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.4567901234567901,
+      "kappa": 0.03191489361702127
+    },
+    {
+      "F1": 16,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.4567901234567901,
+      "kappa": 0.14861460957178851
+    },
+    {
+      "F1": 4,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.45631528964862295,
+      "kappa": 0.0
+    },
+    {
+      "F1": 8,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.45631528964862295,
+      "kappa": 0.05586592178770955
+    },
+    {
+      "F1": 4,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.45584045584045585,
+      "kappa": 0.024128686327077764
+    },
+    {
+      "F1": 8,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.45536562203228875,
+      "kappa": -0.034482758620689724
+    },
+    {
+      "F1": 16,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.4453941120607787,
+      "kappa": 0.0
+    },
+    {
+      "F1": 4,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.4444444444444444,
+      "kappa": 0.0
+    },
+    {
+      "F1": 16,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.4444444444444444,
+      "kappa": 0.11749347258485632
+    },
+    {
+      "F1": 4,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.4439696106362773,
+      "kappa": 0.0
+    },
+    {
+      "F1": 8,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.4439696106362773,
+      "kappa": 0.2277227722772277
+    },
+    {
+      "F1": 8,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.44349477682811017,
+      "kappa": -0.015625
+    },
+    {
+      "F1": 4,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.4434947768281101,
+      "kappa": 0.0
+    },
+    {
+      "F1": 8,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.44254510921177587,
+      "kappa": -0.048387096774193505
+    },
+    {
+      "F1": 16,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.43209876543209874,
+      "kappa": 0.11219512195121961
+    },
+    {
+      "F1": 16,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.43162393162393164,
+      "kappa": 0.14861460957178851
+    },
+    {
+      "F1": 16,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.4316239316239316,
+      "kappa": 0.03448275862068961
+    },
+    {
+      "F1": 16,
+      "D": 4,
+      "dropout_rate": 0.3,
+      "kernel_length": 32,
+      "accuracy": 0.43114909781576444,
+      "kappa": -0.0714285714285714
+    },
+    {
+      "F1": 8,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.43067426400759734,
+      "kappa": 0.027431421446384108
+    },
+    {
+      "F1": 4,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.42924976258309594,
+      "kappa": -0.19083969465648853
+    },
+    {
+      "F1": 16,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.4188034188034188,
+      "kappa": 0.06905370843989767
+    },
+    {
+      "F1": 16,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.4188034188034188,
+      "kappa": 0.06666666666666665
+    },
+    {
+      "F1": 16,
+      "D": 2,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.4183285849952516,
+      "kappa": 0.03191489361702127
+    },
+    {
+      "F1": 16,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.4183285849952516,
+      "kappa": 0.19999999999999996
+    },
+    {
+      "F1": 4,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 128,
+      "accuracy": 0.40645773979107314,
+      "kappa": 0.03191489361702127
+    },
+    {
+      "F1": 8,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.40645773979107314,
+      "kappa": -0.05507246376811592
+    },
+    {
+      "F1": 4,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.40550807217473883,
+      "kappa": 0.12359550561797761
+    },
+    {
+      "F1": 16,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.3945868945868946,
+      "kappa": 0.09866666666666668
+    },
+    {
+      "F1": 4,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.39411206077872746,
+      "kappa": 0.13539192399049882
+    },
+    {
+      "F1": 4,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.3936372269705603,
+      "kappa": 0.08080808080808077
+    },
+    {
+      "F1": 8,
+      "D": 4,
+      "dropout_rate": 0.5,
+      "kernel_length": 32,
+      "accuracy": 0.3936372269705603,
+      "kappa": 0.01621621621621616
+    },
+    {
+      "F1": 16,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.3936372269705603,
+      "kappa": 0.17460317460317454
+    },
+    {
+      "F1": 4,
+      "D": 1,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.39268755935422606,
+      "kappa": -0.048387096774193505
+    },
+    {
+      "F1": 4,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 64,
+      "accuracy": 0.35422602089268757,
+      "kappa": -0.09135802469135812
+    },
+    {
+      "F1": 4,
+      "D": 2,
+      "dropout_rate": 0.3,
+      "kernel_length": 64,
+      "accuracy": 0.3537511870845204,
+      "kappa": -0.1729323308270676
+    },
+    {
+      "F1": 8,
+      "D": 1,
+      "dropout_rate": 0.5,
+      "kernel_length": 128,
+      "accuracy": 0.34235517568850904,
+      "kappa": -0.1223021582733812
+    }
+  ],
+  "best_params": {
+    "F1": 4,
+    "D": 1,
+    "dropout_rate": 0.3,
+    "kernel_length": 128,
+    "accuracy": 0.54320987654321,
+    "kappa": 0.24271844660194175
+  },
+  "best_accuracy": 0.54320987654321
+}

@@ -1,0 +1,34 @@
+# Data (auto-downloaded by MNE)
+data/
+
+# Model checkpoints
+*.pt
+*.pth
+*.pkl
+models/ensemble/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp scripts
+fix_bugs.py
+patch_bugs.py
+
+# Logs
+*.log
+
+# IDE
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Outputs (re-generated)
+outputs/tuning.log

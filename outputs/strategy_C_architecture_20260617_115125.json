@@ -1,0 +1,81 @@
+{
+  "experiment": "Strategy C: Architecture Improvements",
+  "timestamp": "2026-06-17T11:50:55.247668",
+  "subjects": [
+    1
+  ],
+  "improvement_results": {
+    "baseline": {
+      "accuracy": 0.4583333333333333,
+      "kappa": 0.22680412371134007,
+      "f1_macro": 0.40606060606060607,
+      "config": {
+        "F1": 8,
+        "D": 2,
+        "kernel_length": 64,
+        "dropout_rate": 0.5,
+        "epochs": 50,
+        "batch_size": 64
+      }
+    },
+    "batchnorm": {
+      "accuracy": 0.4058333333333334,
+      "kappa": 0.15492957746478864,
+      "f1_macro": 0.375,
+      "config": {
+        "F1": 8,
+        "D": 2,
+        "kernel_length": 64,
+        "dropout_rate": 0.5,
+        "epochs": 50,
+        "batch_size": 64,
+        "use_batchnorm": true
+      }
+    },
+    "label_smoothing": {
+      "accuracy": 0.41916666666666663,
+      "kappa": 0.18604651162790697,
+      "f1_macro": 0.4507936507936508,
+      "config": {
+        "F1": 8,
+        "D": 2,
+        "kernel_length": 64,
+        "dropout_rate": 0.5,
+        "epochs": 50,
+        "batch_size": 64,
+        "label_smoothing": 0.1
+      }
+    },
+    "se_attention": {
+      "accuracy": 0.4575,
+      "kappa": 0.25,
+      "f1_macro": 0.4678362573099415,
+      "config": {
+        "F1": 8,
+        "D": 2,
+        "kernel_length": 64,
+        "dropout_rate": 0.3,
+        "epochs": 50,
+        "batch_size": 64,
+        "use_batchnorm": true
+      }
+    },
+    "combined": {
+      "accuracy": 0.40166666666666667,
+      "kappa": 0.0,
+      "f1_macro": 0.0784313725490196,
+      "config": {
+        "F1": 8,
+        "D": 2,
+        "kernel_length": 64,
+        "dropout_rate": 0.4,
+        "epochs": 50,
+        "batch_size": 64,
+        "use_batchnorm": true,
+        "label_smoothing": 0.05
+      }
+    }
+  },
+  "best_improvement": "baseline",
+  "best_accuracy": 0.4583333333333333
+}
