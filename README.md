@@ -307,5 +307,5 @@ Contributions welcome! Please submit issues and pull requests.
 
 ---
 
-**Author**: UE5AssetAnalyzer  
-**Last Updated**: 2024
+**Author**: Viandanze  
+**Last Updated**: 2026-07
