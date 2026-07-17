@@ -12,7 +12,7 @@ plt.rcParams['savefig.dpi'] = 180
 plt.rcParams['axes.spines.top'] = False
 plt.rcParams['axes.spines.right'] = False
 
-SAVE_DIR = '/app/data/所有对话/主对话/BCI/visualizations'
+SAVE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 BLUE   = '#4A90D9'
 ORANGE = '#E8833A'
