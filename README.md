@@ -1,47 +1,64 @@
-# BCI_Projects - Motor Imagery Brain-Computer Interface Toolkit
+# BCI - Motor Imagery Brain-Computer Interface Toolkit
 
-A comprehensive toolkit for EEG-based Motor Imagery classification, implementing state-of-the-art deep learning and classical machine learning approaches.
+A comprehensive toolkit for EEG-based Motor Imagery classification, implementing deep learning, classical ML, and ensemble approaches with real-time BrainFlow streaming support.
 
 ## 📋 Project Overview
 
 This project provides complete implementations of:
 - **EEGNet v2** - Compact CNN for EEG classification (Lawhern et al. 2018)
-- **CSP (Common Spatial Pattern)** - Classical BCI approach
+- **Conformer** - Transformer-based EEG classifier
+- **TCN** - Temporal Convolutional Network for time-series EEG
+- **CSP** - Common Spatial Pattern (classical BCI approach)
 - **Riemannian MDM** - Covariance-based classification using Riemannian geometry
+- **Ensemble** - Voting & Stacking with tangent space features
+- **BrainFlow Real-Time Pipeline** - Hardware-agnostic streaming (Synthetic/Ganglion/Cyton)
 
-### Current Performance Targets
+### Verified Results (PhysioNet Motor Movement, 109 subjects, 64ch, 160Hz)
 
-| Model | Multi-Subject | Single-Subject | Target |
-|-------|---------------|----------------|--------|
-| EEGNet (baseline) | 68.10% | 61.54% | 70%+ |
-| CSP | ~65% | ~60% | 70%+ |
-| Riemannian MDM | - | 73.63% | 75%+ |
+| Model | Evaluation | Accuracy | Notes |
+|-------|-----------|----------|-------|
+| EEGNet v2 (baseline) | 5-fold CV | 45.83% | 4-class (25% random) |
+| EEGNet v2 (tuned) | 5-fold CV | 54.32% | Hyperparameter search |
+| Conformer | 5-fold CV | 38.43% | |
+| TCN | 5-fold CV | 40.35% | |
+| Ensemble Voting(soft) | train/test split | 79.29% | EEGNet+Conformer+TCN |
+| **Ensemble Stacking(tangent)** | **train/test split** | **82.14%** | **Cohen's Kappa 0.537** |
+| Riemannian MDM | single subject | 73.63% | |
 
 ## 📁 Project Structure
 
 ```
-BCI_Projects/
+BCI/
 ├── src/                          # Core package
 │   ├── data/                      # Data loading and preprocessing
 │   │   ├── loader.py             # PhysioNet dataset loader
 │   │   └── preprocessing.py      # EEG preprocessing pipeline
 │   ├── models/                    # ML models
 │   │   ├── eegnet.py             # EEGNet v2 implementation
+│   │   ├── conformer.py          # Conformer model
+│   │   ├── tcn.py                # TCN model
+│   │   ├── ensemble.py           # Voting & Stacking ensemble
 │   │   ├── csp.py                # CSP classifier
 │   │   └── riemann_mdm.py        # Riemannian MDM classifier
 │   ├── training/                 # Training utilities
 │   │   ├── trainer.py            # Unified training loop
-│   │   └── augment.py             # Data augmentation
+│   │   └── augment.py             # Data augmentation (6 methods)
+│   ├── inference/                # Real-time inference
+│   │   └── pipeline.py           # StreamingBuffer + RealTimePipeline
 │   ├── evaluation/               # Metrics
 │   │   └── metrics.py            # Comprehensive evaluation
 │   └── utils/                    # Utilities
 │       └── config.py             # Configuration management
 ├── scripts/                      # Executable scripts
+│   ├── brainflow_realtime.py     # BrainFlow real-time streaming
+│   ├── realtime_demo.py          # Real-time pipeline demo
 │   ├── train_eegnet.py           # EEGNet training
+│   ├── train_ensemble.py         # Ensemble training
 │   ├── train_csp.py              # CSP training
 │   ├── train_riemann.py          # Riemannian training
 │   ├── compare_models.py         # Model comparison
 │   └── tune_eegnet.py            # Hyperparameter tuning
+├── visualizations/               # Charts (CN + EN)
 ├── configs/                      # Configuration files
 │   └── default.yaml              # Default configuration
 ├── outputs/                      # Results and checkpoints
@@ -137,6 +154,20 @@ python scripts/tune_eegnet.py --strategy B --full_search
 python scripts/tune_eegnet.py --strategy C --improvements batchnorm
 ```
 
+### 7. BrainFlow Real-Time Streaming
+
+```bash
+# Synthetic board (no hardware needed)
+python scripts/brainflow_realtime.py --duration 30
+
+# Real hardware (requires device)
+python scripts/brainflow_realtime.py --board ganglion    # OpenBCI Ganglion
+python scripts/brainflow_realtime.py --board cyton       # OpenBCI Cyton
+python scripts/brainflow_realtime.py --board cerelog     # Cerelog ESP-EEG
+```
+
+Supports 8 channels at 250Hz, sliding window inference (4s window, 0.5s step). Switch hardware by changing `--board` parameter only.
+
 ## 📊 EEGNet Tuning Strategies
 
 ### Strategy A: Data Augmentation
@@ -200,24 +231,19 @@ pipeline = PreprocessingPipeline(config)
 epochs = pipeline.process_raw(raw)
 ```
 
-## 📈 Experiment Results Template
+## 📈 Experiment Results
 
-### Multi-Subject (LOSO) Results
+### Verified Results (PhysioNet Motor Movement, 109 subjects, 64ch, 160Hz)
 
-| Subject | EEGNet | CSP | Riemannian | Notes |
-|---------|--------|-----|------------|-------|
-| S001 | XX.XX% | XX.XX% | XX.XX% | |
-| S002 | XX.XX% | XX.XX% | XX.XX% | |
-| ... | ... | ... | ... | |
-| **Mean** | **XX.XX%** | **XX.XX%** | **XX.XX%** | |
-
-### Hyperparameter Tuning Results
-
-| Strategy | Best Accuracy | Best Config |
-|----------|---------------|-------------|
-| A (Augmentation) | XX.XX% | method=XXX |
-| B (Grid Search) | XX.XX% | F1=X, D=X, dropout=X.X |
-| C (Architecture) | XX.XX% | improvement=XXX |
+| Model | Evaluation | Accuracy | Notes |
+|-------|-----------|----------|-------|
+| EEGNet v2 (baseline) | 5-fold CV | 45.83% | 4-class (25% random) |
+| EEGNet v2 (tuned) | 5-fold CV | 54.32% | Hyperparameter search |
+| Conformer | 5-fold CV | 38.43% | |
+| TCN | 5-fold CV | 40.35% | |
+| Ensemble Voting(soft) | train/test split | 79.29% | EEGNet+Conformer+TCN |
+| **Ensemble Stacking(tangent)** | **train/test split** | **82.14%** | **Cohen's Kappa 0.537** |
+| Riemannian MDM | single subject | 73.63% | |
 
 ## 🛠️ Configuration
 
@@ -226,7 +252,7 @@ epochs = pipeline.process_raw(raw)
 ```yaml
 # configs/default.yaml
 data:
-  dataset_path: "./BCI_Projects/data/"
+  dataset_path: "./BCI/data/"
   subjects: [1, 2, 3, 4, 5, 6, 7, 8]
   runs: [4, 5, 6]
 
