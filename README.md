@@ -1,4 +1,4 @@
-# BCI - Motor Imagery Brain-Computer Interface Toolkit
+# NeuroDecode - EEG Motor Imagery Decoding System
 
 A comprehensive toolkit for EEG-based Motor Imagery classification, implementing deep learning, classical ML, and ensemble approaches with real-time BrainFlow streaming support.
 
@@ -28,7 +28,7 @@ This project provides complete implementations of:
 ## 📁 Project Structure
 
 ```
-BCI/
+NeuroDecode/
 ├── src/                          # Core package
 │   ├── data/                      # Data loading and preprocessing
 │   │   ├── loader.py             # PhysioNet dataset loader
@@ -252,7 +252,7 @@ epochs = pipeline.process_raw(raw)
 ```yaml
 # configs/default.yaml
 data:
-  dataset_path: "./BCI/data/"
+  dataset_path: "./NeuroDecode/data/"
   subjects: [1, 2, 3, 4, 5, 6, 7, 8]
   runs: [4, 5, 6]
 
