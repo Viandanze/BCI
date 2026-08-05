@@ -97,7 +97,7 @@ pip install pyyaml matplotlib tqdm
 ### Quick Install
 
 ```bash
-cd BCI_Projects
+cd NeuroDecode
 pip install -r requirements.txt
 ```
 
@@ -308,7 +308,7 @@ python scripts/train_eegnet.py --subjects 1 --device cpu
 ### Import Errors
 ```bash
 # Make sure you're in the project root
-cd BCI_Projects
+cd NeuroDecode
 export PYTHONPATH="${PYTHONPATH}:$(pwd)"
 
 # Or run scripts directly
